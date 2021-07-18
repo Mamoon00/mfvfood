@@ -72,7 +72,7 @@
                   >MFV</a
                 >
                 <div class="dropdown-menu" aria-labelledby="dropdown-a">
-                  <a class="dropdown-item" href="reservation.html"
+                  <a class="dropdown-item" href="http://localhost/mfv/restro/index.php"
                     >RESERVATION</a
                   >
                   <a class="dropdown-item" href="stuff.html">STUFF</a>
@@ -103,90 +103,44 @@
 
     <!-- Start Contact -->
     <div class="map-full"></div>
-    <div class="contact-box">
+    <div class="contact-box" style="background-color:#00001a;">
       <div class="container">
         <div class="row">
           <div class="col-lg-12">
             <div class="heading-title text-center">
-              <h2>Contact</h2>
-              <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-              </p>
+              <h2 ><span style="color:white">Contact</span></h2>
             </div>
           </div>
         </div>
-        <div class="row">
-          <div class="col-lg-12">
-            <form id="contactForm">
-              <div class="row">
-                <div class="col-md-12">
-                  <div class="form-group">
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="name"
-                      name="name"
-                      placeholder="Your Name"
-                      required
-                      data-error="Please enter your name"
-                    />
-                    <div class="help-block with-errors"></div>
-                  </div>
-                </div>
-                <div class="col-md-12">
-                  <div class="form-group">
-                    <input
-                      type="text"
-                      placeholder="Your Email"
-                      id="email"
-                      class="form-control"
-                      name="name"
-                      required
-                      data-error="Please enter your email"
-                    />
-                    <div class="help-block with-errors"></div>
-                  </div>
-                </div>
-                <div class="col-md-12">
-                  <div class="form-group">
-                    <select
-                      class="custom-select d-block form-control"
-                      id="guest"
-                      required
-                      data-error="Please Select Person"
-                    >
-                      <option disabled selected>Please Select Person*</option>
-                      <option value="1">1</option>
-                      <option value="2">2</option>
-                      <option value="3">3</option>
-                      <option value="4">4</option>
-                      <option value="5">5</option>
-                    </select>
-                    <div class="help-block with-errors"></div>
-                  </div>
-                </div>
-                <div class="col-md-12">
-                  <div class="form-group">
-                    <textarea
-                      class="form-control"
-                      id="message"
-                      placeholder="Your Message"
-                      rows="4"
-                      data-error="Write your message"
-                      required
-                    ></textarea>
-                    <div class="help-block with-errors"></div>
-                  </div>
-                  <div class="submit-button text-center">
-                    <button class="btn btn-common" id="submit" type="submit">
-                      Send Message
-                    </button>
-                    <div id="msgSubmit" class="h3 text-center hidden"></div>
-                    <div class="clearfix"></div>
-                  </div>
-                </div>
-              </div>
-            </form>
+        <div class="row" style="margin-left:270px">
+          <div class="col-lg-9" style="color:White; font-size:20px">
+             <form action="form-process.php" method="POST">
+            <div class="form-group">
+                <label for="firstname">Firstname</label>
+                <input type="text" name="firstname" id="firstname" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="lastname">Lastname</label>
+                <input type="text" name="lastname" id="lastname" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone</label>
+                <input type="tel" name="phone" id="phone" pattern="^\d{11}$" class="form-control" required>
+				 <label for="phone">Only except 11 digit phone number</label>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <input type="text" name="message" id="message" class="form-control" required>
+            </div>
+            <div class="form-group">
+        <button class="btn btn-success" type="submit">Submit</button>
+        <button class="btn btn-danger" type="reset">Reset</button>
+    </div>
+        </form>
           </div>
         </div>
       </div>
@@ -251,7 +205,7 @@
           <div class="col-lg-3 col-md-6">
             <h3>Subscribe</h3>
             <div class="subscribe_form">
-              <form class="subscribe_form">
+              <form class="subscribe_form" action="sms.php">
                 <input
                   name="EMAIL"
                   id="subs-email"
